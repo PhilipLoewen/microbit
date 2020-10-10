@@ -1,11 +1,24 @@
 input.onButtonPressed(Button.A, function () {
     basic.clearScreen()
     basic.pause(40)
-    for (let ir = 0; ir <= 4; ir++) {
-        for (let ic = 0; ic <= 4; ic++) {
-            led.plot(ic, ir)
+    for (let iy = 0; iy <= 4; iy++) {
+        for (let ix = 0; ix <= 4; ix++) {
+            led.plot(ix, iy)
             basic.pause(40)
-            led.unplot(ic, ir)
+            led.unplot(ix, iy)
+        }
+    }
+    basic.pause(500)
+    basic.showIcon(IconNames.Heart)
+})
+input.onButtonPressed(Button.B, function () {
+    basic.clearScreen()
+    basic.pause(40)
+    for (let ix = 0; ix <= 4; ix++) {
+        for (let iy = 0; iy <= 4; iy++) {
+            led.plot(ix, iy)
+            basic.pause(40)
+            led.unplot(ix, iy)
         }
     }
     basic.pause(500)
